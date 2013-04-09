@@ -289,7 +289,7 @@ class Connection extends EventEmitter
     else
       instanceLookup(@config.server, @config.options.instanceName, (err, port) =>
         if err
-          throw new Error(err)
+          @emit('connect', 'Instance connnect failed: Failed to get response from server')
         else
           @connectOnPort(port)
       )
