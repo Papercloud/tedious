@@ -45,6 +45,6 @@
   "scripts": {
     "test": "scripts/tests-unit",
     "publish": "scripts/build",
-    "install": "scripts/build"
+    "postinstall": "scripts/build"
   }
 }
