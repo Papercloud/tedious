@@ -312,7 +312,7 @@ class Connection extends EventEmitter
     )
 
   closeConnection: ->
-    @socket.destroy()
+    @socket.destroy() if @socket?
 
   createConnectTimer: ->
     @connectTimer = setTimeout(@connectTimeout, @config.options.connectTimeout)
